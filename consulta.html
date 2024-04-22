@@ -6,37 +6,66 @@
     <title>Consulta</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body><div id="head"><button id="btn" type="submit">Enviar Dados</button></div><input type="radio" id="radio">
-   <div> <header>
-   
-        <h1>MARCAR CONSULTA</h1><br><br>
-    
-    </header> </div>
+<body>
+    <div id="head">
+        <button id="btn" type="submit">Enviar Dados</button>
+    </div>
+    <input type="radio" id="radio">
+    <div>
+        <header>
+            <h1>MARCAR CONSULTA</h1><br><br>
+        </header>
+    </div>
 
     <form method="post" action="dados.html">
         <div id="container">
+            <div>
+                <input id="data">
+            </div>
+            <div>
+                <input placeholder="H/C" id="hora">
+            </div>
+            <div>
+                <select id="opcao">
+                    <option>Especialidades</option>
+                    <option id="dentista">Dentista</option>
+                    <option id="endocrino">Endocrino</option>
+                    <option id="ginecologista">Ginecologista</option>
+                    <option id="nefrologista">Nefrologista</option>
+                    <option id="nutricionista">Nutricionista</option>
+                    <option id="psiquiatra">Psiquiatra</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" placeholder="NOME DO MÉDICO" id="nome">
+            </div>
+            <div>
+                <input type="text" placeholder="D/C" id="diaConsulta">
+            </div>
+            <br>
+        </div>
+        <br><br>
+        <div id="container2">
+            <p id="hdc" name="horario">Horário da Consulta : <span id="resultado2"></span></p>
+            <p id="especialidade" name="especialidade">Especialidade : <span id="Especialidade"></span></p>
+            <p id="nomemed" name="nomeDoMedico">Nome do Médico : <span id="nomeDoMedico"></span></p>
+            <p id="diac" name="diaDaConsulta">Dia da Consulta : <span id="diaDaConsulta"></span></p>
+        </div>
+        <img src="check verde.png" alt="" id="icone">
+        <img src="check vermelho.png" alt="" id="iconeVermelho">
+    </form>
 
-       <div><input   id="data"></div><div><input  placeholder="H/C" id="hora"></div>
-       <div><select  id="opcao"><option>Especialidades</option><option  id="dentista">Dentista</option><option  id="endocrino">Endocrino</option><option id="ginecologista">Ginecologista</option><option id="nefrologista">Nefrologista</option><option id="nutricionista">Nutricionista</option><option id="psiquiatra">Psiquiatra</option></select></div><div><input type="text"  placeholder="NOME DO MÉDICO" id="nome"></div><div><input type="text"  placeholder="D/C" id="diaConsulta"></div>
-       <br>
-      </div><br><br>
-<div id="container2"><p id="hdc" name="horario">Horário da Consulta : <span id="resultado2"></spa></p>     <p id="especialidade" name="especialidade">Especialidade : <span id="Especialidade"></span></p><p id="nomemed" name="nomeDoMedico">Nome do Médico : <span id="nomeDoMedico"></span></p>
- <p id="diac" name="diaDaConsulta">Dia da Consulta : <span id="diaDaConsulta"></span></p></div><img src="check verde.png" alt="" id="icone"><img src="check vermelho.png" alt="" id="iconeVermelho">
-</form>
+    <ul id="novaLista"></ul>
+    <div id="modal">
+        <div id="myModal">
+            <p>Voce foi na consulta marcada?</p>
+            <div id="modalButtons">
+                <button onclick="confirmAr()" id="sim">Sim</button>
+                <button onclick="closeModal()" id="nao">Não</button>
+            </div>
+        </div>
+    </div>
 
-<ul id="novaLista"></ul>
-<div id="modal">
-    <div id="myModal">
-  <p>Voce foi na consulta marcada?</p>
-  <div id="modalButtons">
-    <button onclick="confirmAr()" id="sim">Sim</button>
-    <button onclick="closeModal()" id="nao">Não</button>
-  </div>
-</div>
-
-</div>
-
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
-
-    </html>
+</html>
